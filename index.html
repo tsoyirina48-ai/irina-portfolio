@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Irina Tsoy - Web Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">&lt;Irina /&gt;</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home" data-i18n="nav_home">Home</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#skills" data-i18n="nav_skills">Skills</a>
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <select id="langSelect" class="lang-select">
+          <option value="en">EN</option>
+          <option value="ko">KO</option>
+          <option value="ru">RU</option>
+        </select>
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <img src="images/ai-tech.png" alt="AI Technology Background" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="mono greeting">// <span data-i18n="hero_greeting">Hello, I'm</span></p>
+          <h1 class="hero-name glow-text" data-i18n="hero_name">Irina Tsoy</h1>
+          <div class="typing-line">
+            <span class="mono">&gt; </span>
+            <span class="typed-text" id="typedText"></span>
+            <span class="cursor">|</span>
+          </div>
+          <p class="hero-desc" data-i18n="hero_desc">Currently learning HTML, CSS & JavaScript to build modern web experiences.</p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary" data-i18n="nav_contact">Contact</a>
+            <a href="#skills" class="btn btn-outline" data-i18n="nav_skills">Skills</a>
+          </div>
+        </div>
+        <div class="hero-character">
+          <div class="character-trigger" id="characterTrigger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3C1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          </div>
+          <div class="character-popup" id="characterPopup">
+            <div class="character-card">
+              <img src="images/character.png" alt="KakaoTalk QR Code" />
+            </div>
+            <div class="popup-arrow"></div>
+          </div>
+          <p class="hover-hint">Hover me!</p>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title glow-text">## <span data-i18n="about_title">About Me</span></h2>
+      <div class="divider"></div>
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="image-frame">
+            <img src="images/study-photo.jpg" alt="Studying Web Development" />
+            <div class="image-border"></div>
+          </div>
+        </div>
+        <div class="about-content">
+          <p class="about-desc" data-i18n="about_desc">I'm a passionate learner diving into the world of web development. Currently studying HTML, CSS, and JavaScript fundamentals, I'm building my skills step by step to create beautiful and functional websites.</p>
+          <div class="about-cards">
+            <div class="about-card">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div>
+                <p class="card-title">HTML & CSS</p>
+                <p class="card-desc">Building structure & style</p>
+              </div>
+            </div>
+            <div class="about-card">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <div>
+                <p class="card-title">JavaScript</p>
+                <p class="card-desc">Adding interactivity</p>
+              </div>
+            </div>
+            <div class="about-card">
+              <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div>
+                <p class="card-title">Practice</p>
+                <p class="card-desc">Learning by doing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title glow-text">## <span data-i18n="skills_title">Tech Skills</span></h2>
+      <div class="divider"></div>
+      <div class="skills-container">
+        <div class="skill-item" data-level="60">
+          <div class="skill-header">
+            <span class="skill-name" data-i18n="skills_html">HTML5 - Structure & Semantics</span>
+            <span class="skill-badge" data-i18n="skills_progress">In Progress</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill skill-html" style="--level: 60%"></div>
+          </div>
+          <div class="skill-percent">60%</div>
+        </div>
+        <div class="skill-item" data-level="45">
+          <div class="skill-header">
+            <span class="skill-name" data-i18n="skills_css">CSS3 - Styling & Animations</span>
+            <span class="skill-badge" data-i18n="skills_progress">In Progress</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill skill-css" style="--level: 45%"></div>
+          </div>
+          <div class="skill-percent">45%</div>
+        </div>
+        <div class="skill-item" data-level="30">
+          <div class="skill-header">
+            <span class="skill-name" data-i18n="skills_js">JavaScript - Logic & Interactivity</span>
+            <span class="skill-badge" data-i18n="skills_progress">In Progress</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill skill-js" style="--level: 30%"></div>
+          </div>
+          <div class="skill-percent">30%</div>
+        </div>
+      </div>
+      <!-- Terminal -->
+      <div class="terminal">
+        <div class="terminal-header">
+          <div class="terminal-dot red"></div>
+          <div class="terminal-dot yellow"></div>
+          <div class="terminal-dot green"></div>
+          <span class="terminal-title">terminal</span>
+        </div>
+        <p class="terminal-line"><span class="terminal-prompt">$</span> learning --status</p>
+        <p class="terminal-output">→ Actively studying and practicing every day...</p>
+        <p class="terminal-line"><span class="terminal-prompt">$</span> <span class="cursor">|</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title glow-text">## <span data-i18n="projects_title">Learning Journey</span></h2>
+      <p class="section-desc" data-i18n="projects_desc">My coding practice and study materials</p>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="m10 13-2 2 2 2"/><path d="m14 17 2-2-2-2"/></svg>
+          </div>
+          <h3 class="project-title">HTML Forms Practice</h3>
+          <p class="project-desc">Building user registration forms with proper labels, inputs, and validation attributes.</p>
+          <div class="project-tags">
+            <span>HTML5</span><span>Forms</span><span>Semantics</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><line x1="3" x2="21" y1="9" y2="9"/><line x1="9" x2="9" y1="21" y2="9"/></svg>
+          </div>
+          <h3 class="project-title">CSS Layout Exercises</h3>
+          <p class="project-desc">Practicing Flexbox and Grid layouts to create responsive page structures.</p>
+          <div class="project-tags">
+            <span>CSS3</span><span>Flexbox</span><span>Grid</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+          </div>
+          <h3 class="project-title">JavaScript Basics</h3>
+          <p class="project-desc">Writing interactive scripts: DOM manipulation, event handling, and basic algorithms.</p>
+          <div class="project-tags">
+            <span>JavaScript</span><span>DOM</span><span>Events</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title glow-text">## <span data-i18n="contact_title">Get In Touch</span></h2>
+      <p class="section-desc" data-i18n="contact_desc">Feel free to reach out!</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div>
+              <p class="contact-label" data-i18n="contact_email">Email</p>
+              <a href="mailto:tsoyirina48@gmail.com" class="contact-value">tsoyirina48@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <p class="contact-label" data-i18n="contact_phone">Phone</p>
+              <a href="tel:010-2660-0348" class="contact-value">010-2660-0348</a>
+            </div>
+          </div>
+          <div class="contact-card contact-kakao" id="kakaoCard">
+            <div class="contact-icon kakao-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            </div>
+            <div>
+              <p class="contact-label" data-i18n="contact_kakao">KakaoTalk QR</p>
+              <p class="contact-value">KakaoTalk — Hover to see QR</p>
+            </div>
+            <div class="kakao-popup" id="kakaoPopup">
+              <div class="kakao-popup-card">
+                <img src="images/character.png" alt="KakaoTalk QR Code" />
+              </div>
+              <div class="kakao-popup-arrow"></div>
+            </div>
+          </div>
+        </div>
+        <div class="terminal contact-terminal">
+          <div class="terminal-header">
+            <div class="terminal-dot red"></div>
+            <div class="terminal-dot yellow"></div>
+            <div class="terminal-dot green"></div>
+            <span class="terminal-title">contact.sh</span>
+          </div>
+          <p class="terminal-line"><span class="terminal-prompt">$</span> cat contact_info.json</p>
+          <div class="json-output">
+            <p>{</p>
+            <p class="json-indent"><span class="json-key">"name"</span>: <span class="json-value">"Irina Tsoy (최이리나)"</span>,</p>
+            <p class="json-indent"><span class="json-key">"email"</span>: <span class="json-value">"tsoyirina48@gmail.com"</span>,</p>
+            <p class="json-indent"><span class="json-key">"phone"</span>: <span class="json-value">"010-2660-0348"</span>,</p>
+            <p class="json-indent"><span class="json-key">"status"</span>: <span class="json-value">"Open to opportunities"</span></p>
+            <p>}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-text"><span data-i18n="footer_text">Built with passion while learning web development</span> &#10084;</p>
+      <p class="footer-copy">&copy; 2025 Irina Tsoy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
